@@ -1,0 +1,15 @@
+.navbar-default .nav > li>a {
+  color: black;
+}
+
+@media (min-width: 768px) {
+  #mainNav.affix-top {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+  #mainNav.affix-top > a {
+    color: black;
+  }
+  .navbar-brand {
+    color: #f05f40 !important;
+  }
+}
