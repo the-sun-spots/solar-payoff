@@ -12,8 +12,8 @@ estimate.collectUserInput = function() {
     estimate.madeInWashington = $('#checkbox').is(':checked');
     //will clear contents of form
     estimate.clearForm();
+    //start controller execution
     estimateController.incentiveBenefits();
-    console.log(estimate);
   });
 };
 
