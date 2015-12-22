@@ -25,9 +25,10 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="/styles/nav.css" type="text/css">
+    <link rel="stylesheet" href="/styles/form.css" type="text/css">
   </head>
 
-  <body>
+  <body id="page-top">
 
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
@@ -77,10 +78,61 @@
 
     <main>
       <!-- Calculator Form -->
-      <section id="">
-        <form>
-        </form>
+
+      <section id="new-calc">
+        <div class="container">
+
+          <div class="row">
+
+            <div class="col-lg-8 col-lg-offset-2">
+
+              <form role="form" id="input-calc">
+                <div class="form-group">
+                  <label class="control-label">Name:
+                    <div class="">
+                      <input type="text" id="calc-name" name="username" placeholder="Name">
+                    </div>
+                  </label>
+                </div>
+
+                <div class="form-group">
+                  <label class="control-label">Current Usage:
+                    <div class="">
+                      <input type="number" id="current-kwh-per-day" name="usage-number" min="1" max="50" placeholder="kWh/day">
+                    </div>
+                  </label>
+                </div>
+
+                <div class="form-group">
+                  <label class="control-label">Solar Usage:
+                    <div class="">
+                      <input type="number" id="solar-kwh-per-day" name="solar-usage-number" min="1" max="50" placeholder="kWh/day">
+                    </div>
+                  </label>
+                </div>
+
+                <div class="form-group">
+                  <label>
+                    <div class="control-label">Installation Cost:
+                      <div class="">
+                        <input type="number" id="up-front-cost" name="installation-cost" placeholder="Ex: 15000.00">
+                      </div>
+                    </div>
+                  </label>
+                </div>
+
+                <div class="form-group">
+                  <input id="input-form-submit" type="submit">
+                </div>
+
+              </form>
+
+
+            </div> <!-- End of form container-->
+          </div> <!-- End of class row -->
+        </div>
       </section>
+
 
       <!-- Results Table -->
       <section id="">
