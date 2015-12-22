@@ -26,6 +26,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="/styles/nav.css" type="text/css">
     <link rel="stylesheet" href="/styles/form.css" type="text/css">
+    <link rel="stylesheet" href="/styles/footer.css" type="text/css">
   </head>
 
   <body id="page-top">
@@ -68,9 +69,9 @@
     <header>
         <div class="header-content">
             <div class="header-content-inner">
-                <h1>Your Favorite Source of Free Bootstrap Themes</h1>
+                <h1>What Would 'Solar Panels' Actually Cost Me?</h1>
                 <hr>
-                <p>Start Bootstrap can help you build better websites using the Bootstrap CSS framework! Just download your template and start going, no strings attached!</p>
+                <p>This project is looking just at 'Solar Panels',but could be expanded to be any improvement in the future.</p>
                 <a href="#about" class="btn btn-primary btn-xl page-scroll">Find Out More</a>
             </div>
         </div>
@@ -163,16 +164,80 @@
       <!-- About Section -->
       <section id="about">
         <article>
+          This is the about section.
         </article>
       </section>
 
       <!-- Helpful Resources -->
       <section id="">
+        <article>
+          Resources
+        </article>
       </section>
     </main>
 
     <!-- Footer Section -->
-    <footer>Copyright (c) 2015 Copyright Holder All Rights Reserved.</footer>
+    <footer class="footer-distributed">Copyright (c) 2015 Copyright Holder All Rights Reserved.
+
+      <div class="footer-left">
+
+				<h3>Company<span>logo</span></h3>
+
+				<p class="footer-links">
+					<a href="#">Home</a>
+					·
+					<a href="#">Blog</a>
+					·
+					<a href="#">Pricing</a>
+					·
+					<a href="#">About</a>
+					·
+					<a href="#">Faq</a>
+					·
+					<a href="#">Contact</a>
+				</p>
+
+				<p class="footer-company-name">Company Name &copy; 2015</p>
+			</div>
+
+			<div class="footer-center">
+
+				<div>
+					<i class="fa fa-map-marker"></i>
+					<p><span>21 Revolution Street</span> Paris, France</p>
+				</div>
+
+				<div>
+					<i class="fa fa-phone"></i>
+					<p>+1 555 123456</p>
+				</div>
+
+				<div>
+					<i class="fa fa-envelope"></i>
+					<p><a href="mailto:support@company.com">support@company.com</a></p>
+				</div>
+
+			</div>
+
+			<div class="footer-right">
+
+				<p class="footer-company-about">
+					<span>About the company</span>
+					Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.
+				</p>
+
+				<div class="footer-icons">
+
+					<a href="#"><i class="fa fa-facebook"></i></a>
+					<a href="#"><i class="fa fa-twitter"></i></a>
+					<a href="#"><i class="fa fa-linkedin"></i></a>
+					<a href="#"><i class="fa fa-github"></i></a>
+
+				</div>
+
+			</div>
+
+    </footer>
 
   <!-- Scripts -->
   <!-- jQuery -->
@@ -190,16 +255,24 @@
   <!-- Custom Theme JavaScript -->
   <script src="/vendor/bootstrap/js/creative.js"></script>
 
+  <!-- utility -->
+  <script type="text/javascript" src="/scripts/utility.js"></script>
+
   <!-- Model -->
   <script src="/scripts/estimate.js"></script>
+  <script src="/scripts/about.js"></script>
+
+  <!-- View -->
+  <script src="/scripts/estimateView.js"></script>
+  <script src="/scripts/aboutView.js"></script>
 
   <!-- Controllers -->
   <script src="/scripts/estimateController.js"></script>
+  <script src="/scripts/aboutController.js"></script>
 
-  <!-- utility -->
-  <script type="text/javascript" src="/scripts/utility.js">
+  <!-- Router -->
+  <script src="/scripts/router.js"></script>
 
-  </script>
 
   </body>
 </html>
