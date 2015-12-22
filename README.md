@@ -47,10 +47,10 @@ Incentive Benefits
 Tax Benefits
 Usage Credits
 WA incentives for modules manufactured in state
-Input Form
 Helpful Resource Links
 
 VIEW (Rendered – Finals Results)
+Input Form
 Current costs vs. post improvement benefit.
 Tax incentives
 Net metering incentive
