@@ -1,0 +1,16 @@
+<!-- Handlebars template for the 'About' Page -->
+<!-- Uses properties from global 'teamMembers' object that is filled from GitHub API -->
+
+<article class="about-profile">  <!-- Team member profile -->
+  <figure>
+    <img src"{{bioPic}}"></img>
+  </figure>
+
+  <div class="bio-content">
+    <h2>{{name}}</h2>
+    <p class="about-bio">{{bio}}</p>
+    <div class="about-hireable" data-hireable="{{hireable}}">Hireable</div>
+    <a class="about-github-profile" src="{{gitHubProfile}}"><i class="fa fa-github-square"></i> GitHub</a>
+  </div>
+
+</article>
