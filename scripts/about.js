@@ -1,8 +1,8 @@
 var about = {};
 
-var memberNames = ['MJFoster', 'setheid', 'palindromed', 'jessethach'];  // Array of team member GitHub Logins.
+about.memberNames = ['MJFoster', 'setheid', 'palindromed', 'jessethach'];  // Array of team member GitHub Logins.
 
-var team = [];  // Array of team member objects.
+about.team = [];  // Array of team member objects.
 
 function TeamMember(memberData) {        // Constructor to create a team member
   this.memberName = memberData.name;
@@ -19,11 +19,8 @@ about.createTeamMember = function(memberNames) {
       url: '/github/users/' + member,
       type: 'GET',
       success: function(memberData, message, xhr) {
-        team[index] = new TeamMember(memberData);
+        about.team[index] = new TeamMember(memberData);
       }
     });
   });
 };
-
-// Initiates CREATION & LOADING of 'team' array!
-about.createTeamMember(memberNames);

@@ -3,7 +3,10 @@ page('/', app.setInitialView);
 
 page('/calculator', app.focusOnForm);
 
-page('/about', aboutController.show);
+page('/about', aboutController.show,
+  // Initiates CREATION & LOADING of 'team' array!
+  about.createTeamMember(about.memberNames)
+);
 
 page('/resources', resourcesController.show);
 
