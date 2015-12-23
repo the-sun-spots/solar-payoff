@@ -1,6 +1,6 @@
 var estimateController = {};
 
-estimateController.incentiveBenefits = function() {
+estimateController.calcResults = function(ctx, next) {
   //assign the value of dollar amount per day that utility company will pay homeowner
   var solarIncome = estimateController.calcUsageCredits(estimate.solarPerDay);
   //get the difference in daily energy cost after solar panels installed
@@ -9,7 +9,8 @@ estimateController.incentiveBenefits = function() {
   estimate.PercentOfTotal = estimateController.calcFederalBenefits(estimate.upFrontCost);
   //call function to get the number of months it will take to pay off solar panels
   estimate.countMonths = estimateController.timeToPayOff(solarIncome);
-  estimateView.renderMonthsToPaidOff();
+  next();
+  // estimateView.renderMonthsToPaidOff();
 };
 
 estimateController.calcFederalBenefits = function(totalCost) {

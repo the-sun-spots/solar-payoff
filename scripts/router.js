@@ -15,7 +15,10 @@ page('/calculator',
     }, 1250, 'easeInOutExpo');
   }
 );
-// page('/result');
+
+page('/calculator/result', estimateController.calcResults, estimateView.renderMonthsToPaidOff);
+
+
 page('/about',
   aboutController.show
 );
