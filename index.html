@@ -91,7 +91,7 @@
                 <div class="form-group">
                   <label class="control-label">Name:
                     <div class="">
-                      <input type="text" id="calc-name" name="username" placeholder="Name">
+                      <input type="text" id="calc-name" name="username" required>
                     </div>
                   </label>
                 </div>
@@ -99,15 +99,15 @@
                 <div class="form-group">
                   <label class="control-label">Current Usage:
                     <div class="">
-                      <input type="number" id="current-kwh-per-day" name="usage-number" min="1" max="50" placeholder="kWh/day"><i class="fa fa-info-circle" data-toggle="tooltip" title="Located on your electric bill"></i>
+                      <input type="number" id="current-kwh-per-day" name="usage-number" min="1" max="50" placeholder="kWh/day" required><i class="fa fa-info-circle" data-toggle="tooltip" data-placement="right"></i>
                     </div>
                   </label>
                 </div>
 
                 <div class="form-group">
-                  <label class="control-label">Solar Usage:
+                  <label class="control-label">Projected Solar Production:
                     <div class="">
-                      <input type="number" id="solar-kwh-per-day" name="solar-usage-number" min="1" max="50" placeholder="kWh/day">
+                      <input type="number" id="solar-kwh-per-day" name="solar-usage-number" min="1" placeholder="kWh/day" required>
                     </div>
                   </label>
                 </div>
@@ -116,7 +116,7 @@
                   <label>
                     <div class="control-label">Installation Cost:
                       <div class="">
-                        <input type="number" id="up-front-cost" name="installation-cost" placeholder="Ex: 15000.00">
+                        <input type="number" id="up-front-cost" name="installation-cost" placeholder="Ex: 15000.00" required>
                       </div>
                     </div>
                   </label>
@@ -207,8 +207,8 @@
 			<div class="footer-right">
 
 				<p class="footer-company-about">
-					<span>About the company</span>
-					Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.
+					<span>Disclaimer</span>
+					Information on this site is only an estimate, and should be considered an average scenario. Confirm with your local solar panel professional to confirm these findings.
 				</p>
 
 				<div class="footer-icons">

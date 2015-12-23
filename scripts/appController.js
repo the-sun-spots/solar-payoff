@@ -15,6 +15,11 @@ app.focusOnForm = function() {
   }, 1250, 'easeInOutExpo');
 };
 
+app.formTip = function() {
+  $('[data-toggle="tooltip"]').tooltip({
+    title: "Check your previous electric bill statements or visit seattle.gov/light/paymybill for this information."});
+};
+
 $(function(){
-  $('[data-toggle="tooltip"]').tooltip();
+  app.formTip();
 });
