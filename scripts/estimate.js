@@ -13,7 +13,8 @@ estimate.collectUserInput = function() {
     //will clear contents of form
     estimate.clearForm();
     //start controller execution
-    estimateController.incentiveBenefits();
+    // estimateController.calcResults();
+    page.redirect('/calculator/result');
   });
 };
 
