@@ -8,7 +8,8 @@ estimateController.incentiveBenefits = function() {
   //calculate 30% tax credit for up front cost of solar panels
   estimate.PercentOfTotal = estimateController.calcFederalBenefits(estimate.upFrontCost);
   //call function to get the number of months it will take to pay off solar panels
-  var countMonths = estimateController.timeToPayOff(solarIncome);
+  estimate.countMonths = estimateController.timeToPayOff(solarIncome);
+  estimateView.renderMonthsToPaidOff();
 };
 
 estimateController.calcFederalBenefits = function(totalCost) {
