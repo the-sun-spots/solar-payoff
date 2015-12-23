@@ -23,3 +23,11 @@ estimateView.StateManufacturedIncentive = function() {  //  render WA state 'man
 
 estimateView.FederalIncentive = function() {  //  render federal benefits.
 };
+
+estimateView.renderMonthsToPaidOff = function(){
+  $('#months').text(estimate.countMonths);
+};
+
+$(function(){
+  estimateView.renderMonthsToPaidOff();
+});
