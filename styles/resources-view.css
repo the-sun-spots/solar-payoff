@@ -1,0 +1,8 @@
+#resources {
+  text-align: center;
+}
+
+#resources > a {
+  font-size: 2rem;
+  display: block;
+}
