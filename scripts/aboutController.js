@@ -8,4 +8,6 @@ aboutController.show = function() {
   $('body').animate({
     scrollTop: $('body').offset().top
   });
+
+  aboutView.render(about.team);
 };
