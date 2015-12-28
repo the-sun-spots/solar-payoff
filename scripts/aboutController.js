@@ -9,5 +9,5 @@ aboutController.show = function() {
     scrollTop: $('body').offset().top
   });
 
-  aboutView.render(about.team);
+  //aboutView.render(about.team);
 };

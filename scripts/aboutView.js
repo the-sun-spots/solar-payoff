@@ -1,9 +1,9 @@
 var aboutView = {};
 
 //Temporary to get Router funcionality working
-aboutView.render = function(team) {
+aboutView.render = function() {
   $('#about').empty();
-  team.forEach(function(member, index){
+  about.team.forEach(function(member, index){
     aboutView.loadTemplate(member);
   });
 };

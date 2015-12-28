@@ -13,8 +13,8 @@ function TeamMember(memberData) {        // Constructor to create a team member
 };
 
 // Get API data from GitHub & add to newly constructed team object.
-about.createTeamMember = function(ctx, next) {
-  about.memberNames.forEach(function(member, index){
+about.createTeamMember = function() {
+  about.team = about.memberNames.map(function(member, index){
     $.ajax({
       url: '/github/users/' + member,
       type: 'GET',

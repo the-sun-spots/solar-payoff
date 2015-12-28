@@ -5,7 +5,7 @@ page('/calculator', app.focusOnForm);
 
 page('/about', aboutController.show,
   // Initiates CREATION & LOADING of 'team' array!
-  about.createTeamMember(about.memberNames)
+  about.createTeamMember
 );
 
 page('/resources', resourcesController.show);
