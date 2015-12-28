@@ -2,13 +2,19 @@ var estimateController = {};
 
 estimateController.calcResults = function(ctx, next) {
   //assign the value of dollar amount per day that utility company will pay homeowner
-  var solarIncome = estimateController.calcUsageCredits(estimate.newEstimate.solarPerDay);
+  var solarIncome = estimateController.calcUsageCredits(newEstimate.solarPerDay);
+  console.log(solarIncome);
   //get the difference in daily energy cost after solar panels installed
   var newDailyEnergyCost = estimateController.adjustedUsage(solarIncome);
+  console.log(newDailyEnergyCost);
   //calculate 30% tax credit for up front cost of solar panels
-  estimate.PercentOfTotal = estimateController.calcFederalBenefits(estimate.newEstimate.upFrontCost);
+  newEstimate.PercentOfTotal = estimateController.calcFederalBenefits(newEstimate.upFrontCost);
+  console.log(newEstimate.PercentOfTotal);
   //call function to get the number of months it will take to pay off solar panels
-  estimate.countMonths = estimateController.timeToPayOff(solarIncome);
+  newEstimate.countMonths = estimateController.timeToPayOff(solarIncome);
+  console.log(newEstimate.countMonths);
+  localStorage.setItem('Estimate', JSON.stringify(newEstimate));
+  console.log(newEstimate);
   next();
   // estimateView.renderMonthsToPaidOff();
 };
@@ -21,7 +27,7 @@ estimateController.calcFederalBenefits = function(totalCost) {
 
 estimateController.calcUsageCredits = function(solarProduction){
   //calculate and return dollar amount per day that utility company will pay homeowner
-  if (estimate.madeInWashington){
+  if (newEstimate.madeInWashington){
     return solarProduction * 0.54;
   };
 
@@ -30,13 +36,13 @@ estimateController.calcUsageCredits = function(solarProduction){
 
 estimateController.adjustedUsage = function(solarIncome) {
   //calculate and return new daily kWh rate
-  return estimate.newEstimate.currentElectricalBill - solarIncome;
+  return newEstimate.currentElectricalBill - solarIncome;
 
 };
 
 estimateController.timeToPayOff = function(solarIncome) {
   //calculate and return the number of months it will take to pay off solar panels
-  var toPayOff = estimate.newEstimate.upFrontCost - estimate.newEstimate.PercentOfTotal;
+  var toPayOff = newEstimate.upFrontCost - newEstimate.PercentOfTotal;
   var months = 0;
   var monthlySolarIncome = utility.dayToMonth(solarIncome);
   while (toPayOff > 0) {
