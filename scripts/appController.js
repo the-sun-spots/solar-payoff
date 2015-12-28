@@ -3,6 +3,14 @@ var app = {};
 app.setInitialView = function(){
   $('#new-calc').fadeIn('slow').siblings().hide();
   $('header').show();
+
+  var previous = JSON.parse(window.localStorage.getItem('Estimate'));
+  if (previous){
+    $('#past-estimate').show();
+  }
+  else {
+    $('#past-estimate').hide();
+  }
 };
 
 app.focusOnForm = function() {
@@ -17,7 +25,7 @@ app.focusOnForm = function() {
 
 app.formTip = function() {
   $('[data-toggle="tooltip"]').tooltip({
-    title: "Check your previous electric bill statements or visit seattle.gov/light/paymybill for this information."});
+    title: 'Check your previous electric bill statements or visit seattle.gov/light/paymybill for this information.'});
 };
 
 $(function(){
