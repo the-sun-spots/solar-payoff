@@ -86,7 +86,7 @@ estimateView.resultsLineGraph = function() {
         pointStrokeColor: "#fff",
         pointHighlightFill: "#fff",
         pointHighlightStroke: "rgba(220,220,220,1)",
-        data: lineChartValues
+        data: estimateController.lineChartValues
       }
     ]
   };

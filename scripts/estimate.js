@@ -1,5 +1,6 @@
 var estimate = {};
 var newEstimate = {};
+newEstimate.lineChartValues = [];
 //This function will collect the values from estimate form
 
 
