@@ -1,23 +1,26 @@
 var app = {};
 
 app.setInitialView = function(){
-  $('#new-calc').fadeIn('slow').siblings().hide();
   $('header').show();
   $('#past-estimate').hide();
 
   if (window.localStorage.getItem('Estimate')){
     $('#past-estimate').show();
-  }
+  };
 
+  $('#estimator').show().siblings().hide();
+  $('body').animate({
+    scrollTop: $('body').offset().top
+  }, 0);
 };
 
 app.focusOnForm = function() {
-  $('#new-calc').fadeIn('slow').siblings().hide();
-  $('header').fadeIn('slow');
+  $('header').show();
+  $('#estimator').fadeIn('slow').siblings().hide();
   //add smooth page scroll
-  var goTo = $('#new-calc').offset();
+  var goTo = $('#estimator').offset();
   $('body').animate({
-    scrollTop: goTo.top
+    scrollTop: goTo.top-50
   }, 1250, 'easeInOutExpo');
 };
 
