@@ -14,12 +14,13 @@ function TeamMember(memberData) {        // Constructor to create a team member
 
 // Get API data from GitHub & add to newly constructed team object.
 about.createTeamMember = function() {
-  about.team = about.memberNames.map(function(member, index){
+  about.memberNames.map(function(member, index){
     $.ajax({
       url: '/github/users/' + member,
       type: 'GET',
       success: function(memberData, message, xhr) {
         var member = new TeamMember(memberData);
+        about.team.push(member);//keep an array of objects just in case
         aboutView.loadTemplate(member);
       }
     });
