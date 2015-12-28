@@ -13,4 +13,6 @@ page('/resources', resourcesController.show);
 
 page('/calculator/result', estimateController.calcResults, estimateView.renderMonthsToPaidOff);
 
+page('/review', estimate.loadFromLocalStorage, estimateView.renderMonthsToPaidOff);
+
 page.start();
