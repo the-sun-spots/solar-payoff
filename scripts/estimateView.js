@@ -21,13 +21,13 @@ estimateView.loadTemplate = function() {
 };
 
 estimateView.focusResultTable = function() {
-  $('#attach-results-table').siblings().hide();
+  $('#estimator').siblings().hide();
   $('header').fadeIn('fast');
   $('#new-calc').fadeIn('fast');
 
-  var goTo = $('#attach-results-table').offset();
+  var goTo = $('#estimator').offset();
   $('body').animate({
-    scrollTop: goTo.top
+    scrollTop: goTo.top-50
   }, 1250, 'easeInOutExpo');
 
 };
