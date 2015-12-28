@@ -25,5 +25,4 @@ app.formTip = function() {
 
 $(function(){
   app.formTip();
-  app.arrowFloat();
 });
