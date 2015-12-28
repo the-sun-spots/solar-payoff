@@ -6,12 +6,9 @@ var estimateView = {};
 estimateView.renderMonthsToPaidOff = function(){
   $('#attach-results-table').fadeIn();
   estimateView.loadTemplate();
-<<<<<<< HEAD
+
   //console.log('view ran!');
   estimate.focusResultTable();
-=======
-  console.log('view ran!');
->>>>>>> acfe8ba9bfb831b556074439f12986f62d2e0efb
 };
 
 estimateView.loadTemplate = function() {
@@ -20,15 +17,10 @@ estimateView.loadTemplate = function() {
      var template = Handlebars.compile(data);
      var compiledHtml = template(newEstimate);
      $('#attach-results-table').html(compiledHtml);
-<<<<<<< HEAD
-     //console.log(compiledHtml);
-   });
-=======
-     console.log(compiledHtml);
+
    })
      .done(estimateView.resultsGraph)
      .done(estimateView.focusResultTable);
->>>>>>> acfe8ba9bfb831b556074439f12986f62d2e0efb
 };
 
 estimateView.focusResultTable = function() {
