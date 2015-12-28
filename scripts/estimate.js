@@ -14,7 +14,7 @@ estimate.collectUserInput = function() {
     newEstimate = new Estimate(this);
 
     //will clear contents of form
-    //estimate.clearForm();
+    estimate.clearForm();
 
     //start controller execution
     page.redirect('/calculator/result');

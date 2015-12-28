@@ -3,14 +3,13 @@ var app = {};
 app.setInitialView = function(){
   $('#new-calc').fadeIn('slow').siblings().hide();
   $('header').show();
+  $('#past-estimate').hide();
 
-  var previous = JSON.parse(window.localStorage.getItem('Estimate'));
-  if (previous){
+  //var previous = JSON.parse(window.localStorage.getItem('Estimate'));
+  if (window.localStorage.getItem('Estimate')){
     $('#past-estimate').show();
   }
-  else {
-    $('#past-estimate').hide();
-  }
+
 };
 
 app.focusOnForm = function() {
