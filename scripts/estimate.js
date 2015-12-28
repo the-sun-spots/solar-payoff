@@ -1,6 +1,6 @@
 var estimate = {};
 var newEstimate = {};
-newEstimate.lineChartValues = [];
+
 //This function will collect the values from estimate form
 
 
@@ -27,6 +27,8 @@ var Estimate = function(props) {
   this.solarPerDay = $('#solar-kwh-per-day').val();
   this.currentElectricalBill = $('#current-kwh-per-day').val();
   this.madeInWashington = $('#checkbox').is(':checked');
+  this.lineChartValues = [];
+  this.monthLabel = [];
 };
 
 

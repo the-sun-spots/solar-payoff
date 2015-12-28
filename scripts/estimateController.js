@@ -1,6 +1,7 @@
 var estimateController = {};
-estimateController.lineChartValues = [];
-var monthLabel = [];
+// estimateController.lineChartValues = [];
+//var monthLabel = [];
+//var lineChartValues = [];
 
 
 estimateController.calcResults = function(ctx, next) {
@@ -48,12 +49,14 @@ estimateController.timeToPayOff = function(solarIncome) {
 
   var toPayOff = newEstimate.upFrontCost - newEstimate.PercentOfTotal;
   var months = 0;
+
   var monthlySolarIncome = utility.dayToMonth(solarIncome);
-  while (toPayOff > 0) {
+
+  while (toPayOff > monthlySolarIncome) {
     toPayOff -= monthlySolarIncome;
-    estimateController.lineChartValues.push(toPayOff);
+    newEstimate.lineChartValues.push(toPayOff);
     months += 1;
-    monthLabel.push(months);
+    newEstimate.monthLabel.push(months);
 
   }
   return months;

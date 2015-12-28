@@ -76,7 +76,7 @@ estimateView.resultsLineGraph = function() {
   var ctx = document.getElementById("results-line-graph").getContext("2d");
 
   var dataLine = {
-    labels: monthLabel,
+    labels: newEstimate.monthLabel,
     datasets: [
       {
         label: 'My First dataset',
@@ -86,7 +86,7 @@ estimateView.resultsLineGraph = function() {
         pointStrokeColor: "#fff",
         pointHighlightFill: "#fff",
         pointHighlightStroke: "rgba(220,220,220,1)",
-        data: estimateController.lineChartValues
+        data: newEstimate.lineChartValues
       }
     ]
   };
