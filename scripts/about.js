@@ -19,7 +19,8 @@ about.createTeamMember = function() {
       url: '/github/users/' + member,
       type: 'GET',
       success: function(memberData, message, xhr) {
-        about.team[index] = new TeamMember(memberData);
+        var member = new TeamMember(memberData);
+        aboutView.loadTemplate(member);
       }
     });
   });
