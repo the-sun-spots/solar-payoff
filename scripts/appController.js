@@ -5,7 +5,6 @@ app.setInitialView = function(){
   $('header').show();
   $('#past-estimate').hide();
 
-  //var previous = JSON.parse(window.localStorage.getItem('Estimate'));
   if (window.localStorage.getItem('Estimate')){
     $('#past-estimate').show();
   }
