@@ -22,13 +22,13 @@ estimateView.loadTemplate = function() {
 };
 
 estimateView.focusResultTable = function() {
-  $('#estimator').siblings().hide();
+  $('#attach-results-table').siblings().hide();
   $('header').fadeIn('fast');
   $('#new-calc').fadeIn('fast');
 
-  var goTo = $('#estimator').offset();
+  var goTo = $('#attach-results-table').offset();
   $('body').animate({
-    scrollTop: goTo.top-50
+    scrollTop: goTo.top
   }, 1250, 'easeInOutExpo');
 
 };
@@ -82,7 +82,7 @@ estimateView.resultsLineGraph = function() {
         label: 'My First dataset',
         fillColor: 'rgba(220,220,220,0.5)',
         strokeColor: 'rgba(220,220,220,0.8)',
-        pointColor: "#FF4F17",
+        pointColor: "#FF4F17g",
         pointStrokeColor: "#fff",
         pointHighlightFill: "#fff",
         pointHighlightStroke: "rgba(220,220,220,1)",
