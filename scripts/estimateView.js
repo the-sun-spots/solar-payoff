@@ -60,6 +60,7 @@ estimateView.resultsGraph = function() {
 
   estimateView.myNewChart = new Chart(ctx).Bar(data, {//Data is the JSON from local storage
     scaleBeginAtZero : true,
+    responsive: true,
     scaleShowGridLines : true,
     scaleGridLineColor : 'rgba(0,0,0,.05)',
     scaleGridLineWidth : 1,
@@ -92,6 +93,7 @@ estimateView.resultsLineGraph = function() {
   };
 
   estimateView.lineChart = new Chart(ctx).Line(dataLine, {
+    responsive: true,
     scaleShowGridLines : true,
     scaleGridLineColor : 'rgba(0,0,0,.05)',
     scaleGridLineWidth : 1,
@@ -105,6 +107,7 @@ estimateView.resultsLineGraph = function() {
     pointHitDetectionRadius : 20,
     datasetStroke : true,
     datasetStrokeWidth : 2,
-    datasetFill : true
+    datasetFill : true,
+    showXLabels: 10
   });
 };

@@ -45,7 +45,7 @@ estimateController.timeToPayOff = function(solarIncome) {
 
   var toPayOff = newEstimate.upFrontCost - newEstimate.PercentOfTotal;
   var months = 0;
-
+  var step = 0;
   var monthlySolarIncome = utility.dayToMonth(solarIncome);
 
   while (toPayOff > monthlySolarIncome) {

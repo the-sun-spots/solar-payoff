@@ -1,6 +1,7 @@
 var app = {};
 
 app.setInitialView = function(){
+  estimate.clearForm();
   $('header').show();
   $('#past-estimate').hide();
 

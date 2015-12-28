@@ -33,6 +33,7 @@ var Estimate = function(props) {
 
 
 estimate.clearForm = function () {
+  $('#attach-results-table').empty();
   $('#input-calc').each(function() {
     $('input:checkbox').removeAttr('checked');
     this.reset();
