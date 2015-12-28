@@ -1,39 +1,29 @@
-<div class="container">
+<div id="inner-results-table">
 
-  <div class="row">
+  <h4>Hi {{user}}, look at this!</h4>
 
+  <p>You entered {{upFrontCost}} as your out-of-pocket expense.</p>
 
-    <div class="col-lg-8 col-lg-offset-2">
+  <table>
+    <!-- Column Titles -->
+    <tr>
+      <th>Months</th>
+      <th></th>
+    </tr>
+    <!-- User Results  -->
+    <tr>
+      <td>{{countMonths}}</td>
+      <td></td>
+    </tr>
+  </table>
 
-      <h5>Hi {{user}}, look at this!</h5>
+  <figure>
 
-      <p>You entered {{upFrontCost}} as your out-of-pocket expense.</p>
+    <canvas id="results-graph" width="300" height="300"></canvas>
 
-      <table>
-        <!-- Column Titles -->
-        <tr>
-          <th>Months</th>
-          <th></th>
-        </tr>
-        <!-- User Results  -->
-        <tr>
-          <td>{{countMonths}}</td>
-          <td></td>
-        </tr>
-      </table>
-
-    </div>
-
-
-  </div>
+  </figure>
 
 </div>
-
-<section>
-
-  <canvas id="results-graph" width="300" height="300"></canvas>
-
-</section>
 
 <figure>
 
