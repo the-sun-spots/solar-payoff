@@ -2,10 +2,7 @@ var estimate = {};
 var newEstimate = {};
 //This function will collect the values from estimate form
 
-estimate.loadFromLocalStorage = function(ctx, next){
-  newEstimate = JSON.parse(window.localStorage.getItem('Estimate'));
-  next();
-};
+
 
 estimate.collectUserInput = function() {
 
