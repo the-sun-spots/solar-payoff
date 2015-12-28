@@ -2,11 +2,11 @@ var estimateController = {};
 
 estimateController.calcResults = function(ctx, next) {
   //assign the value of dollar amount per day that utility company will pay homeowner
-  var solarIncome = estimateController.calcUsageCredits(estimate.solarPerDay);
+  var solarIncome = estimateController.calcUsageCredits(estimate.newEstimate.solarPerDay);
   //get the difference in daily energy cost after solar panels installed
   var newDailyEnergyCost = estimateController.adjustedUsage(solarIncome);
   //calculate 30% tax credit for up front cost of solar panels
-  estimate.PercentOfTotal = estimateController.calcFederalBenefits(estimate.upFrontCost);
+  estimate.PercentOfTotal = estimateController.calcFederalBenefits(estimate.newEstimate.upFrontCost);
   //call function to get the number of months it will take to pay off solar panels
   estimate.countMonths = estimateController.timeToPayOff(solarIncome);
   next();
@@ -30,13 +30,13 @@ estimateController.calcUsageCredits = function(solarProduction){
 
 estimateController.adjustedUsage = function(solarIncome) {
   //calculate and return new daily kWh rate
-  return estimate.currentElectricalBill - solarIncome;
+  return estimate.newEstimate.currentElectricalBill - solarIncome;
 
 };
 
 estimateController.timeToPayOff = function(solarIncome) {
   //calculate and return the number of months it will take to pay off solar panels
-  var toPayOff = estimate.upFrontCost - estimate.PercentOfTotal;
+  var toPayOff = estimate.newEstimate.upFrontCost - estimate.newEstimate.PercentOfTotal;
   var months = 0;
   var monthlySolarIncome = utility.dayToMonth(solarIncome);
   while (toPayOff > 0) {
