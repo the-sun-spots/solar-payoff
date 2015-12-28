@@ -4,29 +4,17 @@
 
   <p>You entered {{upFrontCost}} as your out-of-pocket expense.</p>
 
-  <table>
-    <!-- Column Titles -->
-    <tr>
-      <th>Months</th>
-      <th></th>
-    </tr>
-    <!-- User Results  -->
-    <tr>
-      <td>{{countMonths}}</td>
-      <td></td>
-    </tr>
-  </table>
+  <p>You get an instant 30% tax credit for that expense; it will then take you {{countMonths}} months to pay off the remainder.</p>
 
   <figure>
 
     <canvas id="results-graph" width="300" height="300"></canvas>
 
   </figure>
+  <figure>
+
+    <canvas id="results-line-graph" width="300" height="300"></canvas>
+
+  </figure>
 
 </div>
-
-<figure>
-
-  <canvas id="results-line-graph" width="300" height="300"></canvas>
-
-</figure>

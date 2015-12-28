@@ -26,7 +26,7 @@ estimateView.focusResultTable = function() {
   $('header').fadeIn('fast');
   $('#new-calc').fadeIn('fast');
 
-  var goTo = $('#estimator').offset();
+  var goTo = $('#attach-results-table').offset();
   $('body').animate({
     scrollTop: goTo.top-50
   }, 1250, 'easeInOutExpo');
