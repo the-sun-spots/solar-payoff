@@ -12,15 +12,28 @@ function TeamMember(memberData) {        // Constructor to create a team member
   this.memberProfile = memberData.html_url;
 };
 
-// Get API data from GitHub & add to newly constructed team object.
-about.createTeamMember = function(ctx, next) {
-  about.memberNames.forEach(function(member, index){
-    $.ajax({
-      url: '/github/users/' + member,
-      type: 'GET',
-      success: function(memberData, message, xhr) {
-        about.team[index] = new TeamMember(memberData);
-      }
+// add new member data to newly constructed team object.
+about.createTeam = function(ctx, next) {
+  if (about.team.length === 0) {
+    async.map(about.memberNames, about.getMember, function(err, results){
+      console.log('new team created');
+      about.team = results;
+      next();
     });
+  } else {
+    console.log('using old team');
+    next();
+  }
+};
+
+// Get API data from GitHub for a member
+about.getMember = function(member, callback) {
+  $.ajax({
+    url: '/github/users/' + member,
+    type: 'GET',
+    success: function(memberData, message, xhr) {
+      var newMember = new TeamMember(memberData);
+      callback(null, newMember);
+    }
   });
 };
