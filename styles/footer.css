@@ -65,6 +65,7 @@
 }
 
 .footer-distributed .footer-center i{
+	padding: 0;
 	background-color:  #33383b;
 	color: #ffffff;
 	font-size: 25px;
@@ -126,6 +127,10 @@
 
 .footer-distributed .footer-icons{
 	margin-top: 25px;
+}
+
+.footer-distributed .footer-icons i {
+	padding: 0;
 }
 
 .footer-distributed .footer-icons a{
