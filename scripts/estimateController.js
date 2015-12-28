@@ -1,5 +1,8 @@
 var estimateController = {};
 
+var monthLabel = [];
+var lineChartValues = [];
+
 estimateController.calcResults = function(ctx, next) {
   //assign the value of dollar amount per day that utility company will pay homeowner
   var solarIncome = estimateController.calcUsageCredits(newEstimate.solarPerDay);
@@ -47,7 +50,9 @@ estimateController.timeToPayOff = function(solarIncome) {
   var monthlySolarIncome = utility.dayToMonth(solarIncome);
   while (toPayOff > 0) {
     toPayOff -= monthlySolarIncome;
+    lineChartValues.push(toPayOff);
     months += 1;
+    monthLabel.push(months);
 
   }
   return months;
