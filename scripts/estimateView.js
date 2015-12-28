@@ -6,9 +6,6 @@ var estimateView = {};
 estimateView.renderMonthsToPaidOff = function(){
   $('#attach-results-table').fadeIn();
   estimateView.loadTemplate();
-
-  //console.log('view ran!');
-  estimate.focusResultTable();
 };
 
 estimateView.loadTemplate = function() {
