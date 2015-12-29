@@ -16,6 +16,10 @@ app.setInitialView = function(){
 };
 
 app.focusOnForm = function() {
+  estimate.clearForm();
+  if (window.localStorage.getItem('Estimate')){
+    $('#past-estimate').show();
+  };
   $('header').show();
   $('#estimator').fadeIn('slow').siblings().hide();
   //add smooth page scroll
