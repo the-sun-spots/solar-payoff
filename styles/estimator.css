@@ -1,28 +1,28 @@
-#estimator {
+/*#estimator {
   padding: 0;
 }
 
 #new-calc {
   padding: 25px 0;
-  /*border: dotted 2px red;*/
+  border: dotted 2px red;
 }
 
 #attach-results-table {
   padding: 25px;
   /*border: dotted 2px red;*/
-}
+}*/
 
 @media screen and (min-width: 767px) {
 
-  #new-calc {
+  /*#new-calc {
     width: 50%;
     float: left;
-  }
+  }*/
 
-  #attach-results-table {
+  /*#attach-results-table {
     width: 50%;
     float: right;
-  }
+  }*/
 
   footer {
     clear: both;
