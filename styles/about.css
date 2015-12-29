@@ -1,13 +1,33 @@
+.about-profile {
+  margin: 2rem 3rem 2rem 1rem ;
+  max-width: 40%;
+  max-height: 40%;
+}
+
+.about-profile > h2 {
+  font-size: 150%;
+}
+
 .team-img {
   max-width: 40%;
   max-height: 40%;
 }
 
-#about {
-  margin: 75px;
+.bio-content {
+  margin-top: 1rem;
 }
 
-.about-profile {
-  margin: 75px;
-  margin-left: 125px;
+.about-bio {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+
+#about {
+  padding: 5rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  /*align-content: space-around;*/
 }
