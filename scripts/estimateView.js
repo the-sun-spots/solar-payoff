@@ -17,17 +17,18 @@ estimateView.loadTemplate = function() {
 
    })
      .done(estimateView.resultsGraph)
+     .done(estimateView.resultsLineGraph)
      .done(estimateView.focusResultTable);
 };
 
 estimateView.focusResultTable = function() {
-  $('#attach-results-table').siblings().hide();
+  $('#estimator').siblings().hide();
   $('header').fadeIn('fast');
   $('#new-calc').fadeIn('fast');
 
   var goTo = $('#attach-results-table').offset();
   $('body').animate({
-    scrollTop: goTo.top
+    scrollTop: goTo.top-50
   }, 1250, 'easeInOutExpo');
 
 };
@@ -36,7 +37,7 @@ estimateView.resultsGraph = function() {
   var ctx = document.getElementById("results-graph").getContext("2d");
 
   var data = {
-    labels: ["Test1"],
+    labels: ["Usage"],
     datasets: [
       {
         label: 'My First dataset',
@@ -44,21 +45,22 @@ estimateView.resultsGraph = function() {
         strokeColor: 'rgba(220,220,220,0.8)',
         highlightFill: 'rgba(220,220,220,0.75)',
         highlightStroke: 'rgba(220,220,220,1)',
-        data: [estimate.currentElectricalBill]
+        data: [newEstimate.currentElectricalBill]
       },
       {
         label: 'My Second dataset',
         fillColor: 'rgba(151,187,205,0.5)',
         strokeColor: 'rgba(151,187,205,0.8)',
-        highlightFill: 'rgba(151,187,205,0.75)',
+        highlightFill: '#FF4F17',
         highlightStroke: 'rgba(151,187,205,1)',
-        data: [estimate.solarPerDay]
+        data: [newEstimate.newDailyEnergyCost]
       }
     ]
   };
 
   estimateView.myNewChart = new Chart(ctx).Bar(data, {//Data is the JSON from local storage
     scaleBeginAtZero : true,
+    responsive: true,
     scaleShowGridLines : true,
     scaleGridLineColor : 'rgba(0,0,0,.05)',
     scaleGridLineWidth : 1,
@@ -67,6 +69,45 @@ estimateView.resultsGraph = function() {
     barShowStroke : true,
     barStrokeWidth : 2,
     barValueSpacing : 5,
-    barDatasetSpacing : 1,
+    barDatasetSpacing : 1
+  });
+};
+
+estimateView.resultsLineGraph = function() {
+  var ctx = document.getElementById("results-line-graph").getContext("2d");
+
+  var dataLine = {
+    labels: newEstimate.monthLabel,
+    datasets: [
+      {
+        label: 'My First dataset',
+        fillColor: 'rgba(220,220,220,0.5)',
+        strokeColor: 'rgba(220,220,220,0.8)',
+        pointColor: "#FF4F17",
+        pointStrokeColor: "#fff",
+        pointHighlightFill: "#fff",
+        pointHighlightStroke: "rgba(220,220,220,1)",
+        data: newEstimate.lineChartValues
+      }
+    ]
+  };
+
+  estimateView.lineChart = new Chart(ctx).Line(dataLine, {
+    responsive: true,
+    scaleShowGridLines : true,
+    scaleGridLineColor : 'rgba(0,0,0,.05)',
+    scaleGridLineWidth : 1,
+    scaleShowHorizontalLines: true,
+    scaleShowVerticalLines: true,
+    bezierCurve : true,
+    bezierCurveTension : 0.4,
+    pointDot : true,
+    pointDotRadius : 4,
+    pointDotStrokeWidth : 1,
+    pointHitDetectionRadius : 20,
+    datasetStroke : true,
+    datasetStrokeWidth : 2,
+    datasetFill : true,
+    showXLabels: 10
   });
 };

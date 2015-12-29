@@ -24,6 +24,8 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/styles/nav.css" type="text/css">
     <link rel="stylesheet" href="/styles/form.css" type="text/css">
+    <link rel="stylesheet" href="/styles/results-table.css" type="text/css">
+    <link rel="stylesheet" href="/styles/estimator.css" type="text/css">
     <link rel="stylesheet" href="/styles/footer.css" type="text/css">
     <link rel="stylesheet" href="/styles/resources-view.css" type="text/css">
     <link rel="stylesheet" href="/styles/about.css" type="text/css">
@@ -72,85 +74,78 @@
             <div class="header-content-inner">
                 <h1>What Would 'Solar Panels' Actually Cost Me?</h1>
                 <hr>
-                <p>This project is looking just at 'Solar Panels',but could be expanded to be any improvement in the future.</p>
-                <a href="#new-calc" class="page-scroll"><i class="fa fa-5x fa-angle-double-down"></i></a>
+                <p>This project is looking just at 'Solar Panels,' but can be expanded to include any improvement in the future.</p>
+                <a href="#new-calc" class="page-scroll"><i id= "arrow" class="fa fa-5x fa-angle-double-down"></i></a>
             </div>
         </div>
     </header>
 
     <main>
       <!-- Calculator Form -->
-
-      <section id="new-calc">
-        <div class="container">
-
-          <div class="row">
-
-            <div class="col-lg-8 col-lg-offset-2">
-
-              <form role="form" id="input-calc">
-                <div class="form-group">
-                  <label class="control-label">Name:
-                    <div class="">
-                      <input type="text" id="calc-name" name="username" required>
-                    </div>
-                  </label>
+      <section id="estimator">
+        <div id="new-calc">
+          <form role="form" id="input-calc">
+            <div class="form-group">
+              <label class="control-label">Name:
+                <div class="">
+                  <input type="text" id="calc-name" name="username" required>
                 </div>
+              </label>
+            </div>
 
-                <div class="form-group">
-                  <label class="control-label">Current Usage:
-                    <div class="">
-                      <input type="number" id="current-kwh-per-day" name="usage-number" min="1" placeholder="kWh/day" required><i class="fa fa-info-circle" data-toggle="tooltip" data-placement="right"></i>
-                    </div>
-                  </label>
+            <div class="form-group">
+              <label class="control-label">Current Usage:
+                <div class="">
+                  <input type="number" id="current-kwh-per-day" name="usage-number" min="1" placeholder="kWh/day" required><i class="fa fa-info-circle" data-toggle="tooltip" data-placement="right"></i>
                 </div>
+              </label>
+            </div>
 
-                <div class="form-group">
-                  <label class="control-label">Projected Solar Production:
-                    <div class="">
-                      <input type="number" id="solar-kwh-per-day" name="solar-usage-number" min="1" placeholder="kWh/day" required>
-                    </div>
-                  </label>
+            <div class="form-group">
+              <label class="control-label">Projected Solar Production:
+                <div class="">
+                  <input type="number" id="solar-kwh-per-day" name="solar-usage-number" min="1" placeholder="kWh/day" required>
                 </div>
+              </label>
+            </div>
 
-                <div class="form-group">
-                  <label>
-                    <div class="control-label">Installation Cost:
-                      <div class="">
-                        <input type="number" id="up-front-cost" name="installation-cost" placeholder="Ex: 15000.00" required>
-                      </div>
-                    </div>
-                  </label>
+            <div class="form-group">
+              <label>
+                <div class="control-label">Installation Cost:
+                  <div class="">
+                    <input type="number" id="up-front-cost" name="installation-cost" placeholder="Ex: 15000.00" required>
+                  </div>
                 </div>
+              </label>
+            </div>
 
-                <div class="form-group">
-                  <label>
-                    <div class="control-label">
-                      <div class="">
-                        <input type="checkbox" name="your-group" value="unit-in-group" id="checkbox"> Made in Washington
-                      </div>
-                    </div>
-                  </label>
+            <div class="form-group">
+              <label>
+                <div class="control-label">
+                  <div class="">
+                    <input type="checkbox" name="your-group" value="unit-in-group" id="checkbox"> Made in Washington
+                  </div>
+
                 </div>
+              </label>
+            </div>
 
-                <div class="form-group">
-                  <input id="input-form-submit" type="submit">
-                </div>
+            <div class="form-group">
+              <input id="input-form-submit" type="submit">
+              <a id="past-estimate" href="/review"><p>
+                Load previous estimate data
+              </p> </a>
+            </div>
 
-              </form>
+          </form>
+        </div>
 
 
-            </div> <!-- End of form container-->
-          </div> <!-- End of class row -->
+        <!-- Results Table -->
+        <div id="attach-results-table">
+
         </div>
       </section>
-
-
-      <!-- Results Table -->
-      <section id="attach-results-table">
-
-      </section>
-
       <!-- About Section -->
       <section id="about" class="container">
 
@@ -264,6 +259,7 @@
   <script src="/scripts/estimateController.js"></script>
   <script src="/scripts/aboutController.js"></script>
   <script src="/scripts/resourcesController.js"></script>
+  <script src="/scripts/review.js"></script>
 
   <!-- Router -->
   <script src="/scripts/router.js"></script>
