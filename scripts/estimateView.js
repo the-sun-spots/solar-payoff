@@ -40,7 +40,7 @@ estimateView.resultsGraph = function() {
   var ctx = document.getElementById('results-graph').getContext('2d');
 
   var data = {
-    labels: ['Current vs Adjusted kWh'],
+    labels: ['Current vs Adjusted'],
     datasets: [
       {
         label: 'My First dataset',

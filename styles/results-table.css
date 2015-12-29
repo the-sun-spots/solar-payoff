@@ -16,6 +16,10 @@
   width: 300px;
 }
 
+figcaption {
+  text-align: center;
+}
+
 @media (min-width: 1100px) {
   #graph1 {
     width: 50%;
