@@ -1,7 +1,8 @@
 var estimateController = {};
 
-estimateController.calcResults = function(ctx, next) {
+estimateController.calcResults = function() {
   //assign the value of dollar amount per day that utility company will pay homeowner
+
   var solarIncome = estimateController.calcUsageCredits(newEstimate.solarPerDay);
 
   //get the difference in daily energy cost after solar panels installed
@@ -15,7 +16,7 @@ estimateController.calcResults = function(ctx, next) {
 
   localStorage.setItem('Estimate', JSON.stringify(newEstimate));
 
-  next();
+  page.redirect('/review');
 
 };
 
@@ -45,7 +46,7 @@ estimateController.timeToPayOff = function(solarIncome) {
 
   var toPayOff = newEstimate.upFrontCost - newEstimate.PercentOfTotal;
   var months = 0;
-  var step = 0;
+
   var monthlySolarIncome = utility.dayToMonth(solarIncome);
 
   while (toPayOff > monthlySolarIncome) {

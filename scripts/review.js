@@ -1,9 +1,16 @@
 var review = {};
 
 review.loadFromLocalStorage = function(ctx, next){
-  newEstimate = JSON.parse(localStorage.getItem('Estimate'));
-  review.populateForm(newEstimate);
-  next();
+
+  $('#past-estimate').hide();
+  if(window.localStorage.getItem('Estimate')){
+    newEstimate = JSON.parse(window.localStorage.getItem('Estimate'));
+    review.populateForm(newEstimate);
+    next();
+  }
+  else {
+    page.redirect('/calculator');
+  }
 };
 
 review.populateForm = function(newEstimate){
