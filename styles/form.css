@@ -17,10 +17,10 @@ input[type="number"] {
 
 .tooltip-inner  {
   max-width: 350px;
-};
+}
 
-/*@media only screen and (max-width: 480px) {
-  .tooltip-inner {
-    max-width: 100px;
+@media only screen and (max-width: 480px) {
+  .fa {
+    display: none;
   }
-}*/
+}
