@@ -2,9 +2,7 @@ var estimateController = {};
 
 estimateController.calcResults = function(ctx, next) {
   //assign the value of dollar amount per day that utility company will pay homeowner
-  if (newEstimate.newDailyEnergyCost === null) {
-    page.redirect('/calculator');
-  }
+
   var solarIncome = estimateController.calcUsageCredits(newEstimate.solarPerDay);
 
   //get the difference in daily energy cost after solar panels installed

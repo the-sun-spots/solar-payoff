@@ -4,8 +4,10 @@
 var estimateView = {};
 
 estimateView.renderMonthsToPaidOff = function(){
+  
   $('past-estimate').hide();
   $('#attach-results-table').fadeIn();
+
   estimateView.loadTemplate();
 };
 
