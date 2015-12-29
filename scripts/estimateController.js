@@ -45,16 +45,17 @@ estimateController.timeToPayOff = function(solarIncome) {
   //calculate and return the number of months it will take to pay off solar panels
 
   var toPayOff = newEstimate.upFrontCost - newEstimate.PercentOfTotal;
-  var months = 0;
+  var years = 0;
 
   var monthlySolarIncome = utility.dayToMonth(solarIncome);
 
   while (toPayOff > monthlySolarIncome) {
     toPayOff -= monthlySolarIncome;
+
     newEstimate.lineChartValues.push(toPayOff);
-    months += 1;
-    newEstimate.monthLabel.push(months);
+    years += 1;
+    newEstimate.monthLabel.push(years);
 
   }
-  return months;
+  return years;
 };
