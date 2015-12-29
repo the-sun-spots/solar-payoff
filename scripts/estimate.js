@@ -1,11 +1,9 @@
 var estimate = {};
 var newEstimate = {};
+
 //This function will collect the values from estimate form
 
-estimate.loadFromLocalStorage = function(ctx, next){
-  newEstimate = JSON.parse(window.localStorage.getItem('Estimate'));
-  next();
-};
+
 
 estimate.collectUserInput = function() {
 
@@ -14,7 +12,7 @@ estimate.collectUserInput = function() {
     newEstimate = new Estimate(this);
 
     //will clear contents of form
-    //estimate.clearForm();
+    estimate.clearForm();
 
     //start controller execution
     page.redirect('/calculator/result');
@@ -29,10 +27,13 @@ var Estimate = function(props) {
   this.solarPerDay = $('#solar-kwh-per-day').val();
   this.currentElectricalBill = $('#current-kwh-per-day').val();
   this.madeInWashington = $('#checkbox').is(':checked');
+  this.lineChartValues = [];
+  this.monthLabel = [];
 };
 
 
 estimate.clearForm = function () {
+  $('#attach-results-table').empty();
   $('#input-calc').each(function() {
     $('input:checkbox').removeAttr('checked');
     this.reset();

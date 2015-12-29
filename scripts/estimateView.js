@@ -53,13 +53,14 @@ estimateView.resultsGraph = function() {
         strokeColor: 'rgba(151,187,205,0.8)',
         highlightFill: '#FF4F17',
         highlightStroke: 'rgba(151,187,205,1)',
-        data: [newEstimate.solarPerDay]
+        data: [newEstimate.newDailyEnergyCost]
       }
     ]
   };
 
   estimateView.myNewChart = new Chart(ctx).Bar(data, {//Data is the JSON from local storage
     scaleBeginAtZero : true,
+    responsive: true,
     scaleShowGridLines : true,
     scaleGridLineColor : 'rgba(0,0,0,.05)',
     scaleGridLineWidth : 1,
@@ -76,7 +77,7 @@ estimateView.resultsLineGraph = function() {
   var ctx = document.getElementById("results-line-graph").getContext("2d");
 
   var dataLine = {
-    labels: monthLabel,
+    labels: newEstimate.monthLabel,
     datasets: [
       {
         label: 'My First dataset',
@@ -86,12 +87,13 @@ estimateView.resultsLineGraph = function() {
         pointStrokeColor: "#fff",
         pointHighlightFill: "#fff",
         pointHighlightStroke: "rgba(220,220,220,1)",
-        data: lineChartValues
+        data: newEstimate.lineChartValues
       }
     ]
   };
 
   estimateView.lineChart = new Chart(ctx).Line(dataLine, {
+    responsive: true,
     scaleShowGridLines : true,
     scaleGridLineColor : 'rgba(0,0,0,.05)',
     scaleGridLineWidth : 1,
@@ -106,7 +108,6 @@ estimateView.resultsLineGraph = function() {
     datasetStroke : true,
     datasetStrokeWidth : 2,
     datasetFill : true,
-    responsive: true,
     showXLabels: 10
   });
 };
