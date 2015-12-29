@@ -15,12 +15,12 @@
 @media screen and (min-width: 767px) {
 
   #new-calc {
-    width: 50%;
+    width: 40%;
     float: left;
   }
 
   #attach-results-table {
-    width: 50%;
+    width: 60%;
     float: right;
   }
 
