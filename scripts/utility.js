@@ -1,5 +1,5 @@
 var utility = {};
 
 utility.dayToMonth = function(day){
-  return (day * 365) / 12;
+  return (day * 365);
 };
