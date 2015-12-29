@@ -1,11 +1,55 @@
 #inner-results-table {
-  width: 400px;
+  width: 90%;
   margin: 0 auto;
 }
 
 #inner-results-table h4 {
   padding: 0 0 10px;
   margin: 0;
+}
+
+#graph1 {
+  width: 300px;
+}
+
+#graph2 {
+  width: 300px;
+}
+
+@media (min-width: 1100px) {
+  #graph1 {
+    width: 50%;
+    float: left;
+  }
+
+  #graph2 {
+    width: 50%;
+    float: right;
+  }
+}
+
+@media (max-width: 767px) {
+  #graph1 {
+    width: 50%;
+    float: left;
+  }
+
+  #graph2 {
+    width: 50%;
+    float: right;
+  }
+}
+
+@media (max-width: 650px) {
+  #graph1 {
+    width: 300px;
+    float: none;
+  }
+
+  #graph2 {
+    width: 300px;
+    float: none;
+  }
 }
 
 @media (max-width: 400px) {
