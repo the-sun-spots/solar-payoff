@@ -12,8 +12,6 @@ about.team = [];  // Array of team member objects.
 
 function TeamMember(memberData) {        // Constructor to create a team member
   this.memberName = memberData.name;
-  console.log(memberData);
-  // this.memberBio = memberData.bio;
   this.memberBio = about.memberBios[memberData.login];  // Add bio data, from about.memberBios object, to this instance of TeamMember.
   this.memberPic = memberData.avatar_url;
   this.memberHireable = memberData.hireable;

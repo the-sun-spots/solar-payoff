@@ -17,7 +17,6 @@ estimate.collectUserInput = function() {
 };
 
 
-
 var Estimate = function(props) {
   this.user = $('#calc-name').val();
   this.upFrontCost = $('#up-front-cost').val();
@@ -31,12 +30,15 @@ var Estimate = function(props) {
 
 
 estimate.clearForm = function () {
+  $('#reset').hide();
   $('#attach-results-table').empty();
   $('#input-calc').each(function() {
     $('input:checkbox').removeAttr('checked');
     this.reset();
   });
 };
+
+
 
 $(function(){
   estimate.collectUserInput();

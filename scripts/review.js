@@ -6,6 +6,7 @@ review.loadFromLocalStorage = function(ctx, next){
   if(window.localStorage.getItem('Estimate')){
     newEstimate = JSON.parse(window.localStorage.getItem('Estimate'));
     review.populateForm(newEstimate);
+    $('#reset').show();
     next();
   }
   else {
