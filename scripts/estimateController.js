@@ -49,13 +49,16 @@ estimateController.timeToPayOff = function(solarIncome) {
 
   var monthlySolarIncome = utility.dayToMonth(solarIncome);
 
-  while (toPayOff > monthlySolarIncome) {
-    toPayOff -= monthlySolarIncome;
+  while (toPayOff > 0) {
 
     newEstimate.lineChartValues.push(toPayOff);
-    years += 1;
     newEstimate.monthLabel.push(years);
 
+    toPayOff -= monthlySolarIncome;
+    years += 1;
+
+
   }
-  return years;
+  //newEstimate.monthLabel.push(years);
+  return years - 1;
 };
