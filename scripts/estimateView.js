@@ -34,10 +34,10 @@ estimateView.focusResultTable = function() {
 };
 
 estimateView.resultsGraph = function() {
-  var ctx = document.getElementById("results-graph").getContext("2d");
+  var ctx = document.getElementById('results-graph').getContext('2d');
 
   var data = {
-    labels: ["Usage"],
+    labels: ['Current vs Adjusted kWh'],
     datasets: [
       {
         label: 'My First dataset',
@@ -74,7 +74,7 @@ estimateView.resultsGraph = function() {
 };
 
 estimateView.resultsLineGraph = function() {
-  var ctx = document.getElementById("results-line-graph").getContext("2d");
+  var ctx = document.getElementById('results-line-graph').getContext('2d');
 
   var dataLine = {
     labels: newEstimate.monthLabel,
@@ -83,10 +83,10 @@ estimateView.resultsLineGraph = function() {
         label: 'My First dataset',
         fillColor: 'rgba(220,220,220,0.5)',
         strokeColor: 'rgba(220,220,220,0.8)',
-        pointColor: "#FF4F17",
-        pointStrokeColor: "#fff",
-        pointHighlightFill: "#fff",
-        pointHighlightStroke: "rgba(220,220,220,1)",
+        pointColor: '#FF4F17',
+        pointStrokeColor: '#fff',
+        pointHighlightFill: '#fff',
+        pointHighlightStroke: 'rgba(220,220,220,1)',
         data: newEstimate.lineChartValues
       }
     ]
