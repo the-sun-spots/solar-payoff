@@ -2,6 +2,7 @@
   margin: 2rem 3rem 2rem 1rem ;
   max-width: 40%;
   max-height: 40%;
+  text-align: justify;
 }
 
 .about-profile > h2 {
@@ -29,5 +30,17 @@
   flex-direction: row;
   flex-wrap: wrap;
   align-content: flex-start;
-  /*align-content: space-around;*/
+}
+
+@media screen and (max-width: 715px) {
+  #about {
+    padding: 5rem;
+    display: block;
+  }
+
+  .about-profile {
+    margin: auto;
+    max-width: 90%;
+    text-align: justify;
+  }
 }
