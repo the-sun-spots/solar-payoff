@@ -104,7 +104,7 @@ estimateView.resultsLineGraph = function() {
     pointDot : true,
     pointDotRadius : 4,
     pointDotStrokeWidth : 1,
-    pointHitDetectionRadius : 20,
+    pointHitDetectionRadius : 4,
     datasetStroke : true,
     datasetStrokeWidth : 2,
     datasetFill : true,

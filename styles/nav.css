@@ -11,7 +11,7 @@
 }
 
 .header-content-inner i {
-  color: #FF4F17;
+  color: rgba(255, 255, 255, 0.9);
   text-shadow: 1px 1px 4px rgba(50, 50, 50, 0.6);
 }
 
