@@ -11,11 +11,8 @@ estimate.collectUserInput = function() {
     event.preventDefault();
     newEstimate = new Estimate(this);
 
-    //will clear contents of form
-    estimate.clearForm();
-
     //start controller execution
-    page.redirect('/calculator/result');
+    estimateController.calcResults();
   });
 };
 
@@ -27,6 +24,7 @@ var Estimate = function(props) {
   this.solarPerDay = $('#solar-kwh-per-day').val();
   this.currentElectricalBill = $('#current-kwh-per-day').val();
   this.madeInWashington = $('#checkbox').is(':checked');
+  this.flag = true;
   this.lineChartValues = [];
   this.monthLabel = [];
 };

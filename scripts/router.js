@@ -11,8 +11,6 @@ page('/about',
 
 page('/resources', resourcesController.show);
 
-page('/calculator/result', estimateController.calcResults, estimateView.renderMonthsToPaidOff);
-
 page('/review', review.loadFromLocalStorage, estimateView.renderMonthsToPaidOff);
 
 page.start();
